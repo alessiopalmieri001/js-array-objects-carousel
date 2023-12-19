@@ -38,6 +38,12 @@ console.log(title);
 const description = document.getElementById('description');
 console.log(description);
 
+
+//
+
+title.innerHTML = images[0].title;
+description.innerHTML = images[0].description;
+
 //carosel 
 
 for (i = 0; i < images.length; i++){
@@ -71,6 +77,8 @@ function next() {
 
     immagineCarosello[immagineCorrente].classList.add('active');
     
+    title.innerHTML = images[immagineCorrente].title;
+    description.innerHTML = images[immagineCorrente].description;
     
 }
 
@@ -87,7 +95,8 @@ function previous() {
 
     immagineCarosello[immagineCorrente].classList.add('active');
     
-    
+    title.innerHTML = images[immagineCorrente].title;
+    description.innerHTML = images[immagineCorrente].description;
 }
 
 

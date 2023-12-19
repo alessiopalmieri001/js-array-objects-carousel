@@ -46,5 +46,10 @@ body{
     
 }
 .buttons > i:first-child{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.informazioni-img{
+    position: absolute;
+    
 }

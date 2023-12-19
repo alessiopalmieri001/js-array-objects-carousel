@@ -1,23 +1,3 @@
-# js-array-objects-carousel
-
-Ciao ragazzi,
-Esercizio di oggi: Carosello Array di Oggetti
-nome repo: js-array-objects-carousel
-Consegna:
-Dato un array di oggetti letterali con:
- - url dell'immagine
- - titolo
- - descrizione
-Creare un carosello come nella foto allegata.
-Milestone 0:
-Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l'immagine grande in modo da poter stilare lo slider.
-Milestone 1:
-Ora rimuoviamo i contenuti statici e usiamo l'array di oggetti letterali per popolare dinamicamente il carosello.
-Al click dell'utente sulle frecce verso sinistra o destra, l'immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
-Milestone 2:
-Aggiungere il ciclo infinito del carosello. Ovvero se la slide attiva è la prima e l'utente clicca la freccia verso destra, la slide che deve attivarsi sarà l'ultima e viceversa per l'ultima slide se l'utente clicca la freccia verso sinistra.
-Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
-DATI:
 const images = [
     {
         url: 'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg',
@@ -47,6 +27,4 @@ const images = [
         description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
     },
 ];
-(modificato)
-image.png
- 
+

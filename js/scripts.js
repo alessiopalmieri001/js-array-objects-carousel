@@ -31,8 +31,12 @@ const images = [
 console.log(images);
 
 //variabili
-const carosello = document.getElementById('carosel')
+const carosello = document.getElementById('carosel');
 console.log(carosello);
+const title = document.getElementById('title');
+console.log(title);
+const description = document.getElementById('description');
+console.log(description);
 
 //carosel 
 
@@ -86,12 +90,15 @@ function previous() {
     
 }
 
+
+//evento click sul bottone succesivo
 successiva.addEventListener('click', function () {
     next();
 });
-
+//evento click sul bottone precedente
 precedente.addEventListener('click', function () {
     previous();
 });
 
+//intervallo che mi cambia le immiagini ogni 3 s
 const automatico = setInterval(next, 3000);

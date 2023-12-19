@@ -28,3 +28,70 @@ const images = [
     },
 ];
 
+console.log(images);
+
+//variabili
+const carosello = document.getElementById('carosel')
+console.log(carosello);
+
+//carosel 
+
+for (i = 0; i < images.length; i++){
+    const imgCarosel = document.createElement('img');
+    imgCarosel.src = `${images[i].url}`;
+    imgCarosel.classList.add('carosel-img');
+    
+    if(i === 0) {
+        imgCarosel.classList.add('active');
+    }
+
+    carosello.append(imgCarosel);
+}
+
+
+let immagineCorrente = 0;
+//carosello immagini
+const immagineCarosello = document.querySelectorAll('.carosel-img');
+//bottoni
+const successiva = document.getElementById('up-button');
+const precedente = document.getElementById('down-button');
+
+
+function next() {
+    immagineCarosello[immagineCorrente].classList.remove('active');
+    immagineCorrente++;
+
+    if (immagineCorrente === images.length) {
+    immagineCorrente = 0;
+    }
+
+    immagineCarosello[immagineCorrente].classList.add('active');
+    
+    
+}
+
+
+function previous() {
+    immagineCarosello[immagineCorrente].classList.remove('active');
+    
+
+    if (immagineCorrente === 0) {
+    immagineCorrente = images.length;
+    }
+
+    immagineCorrente--;
+
+    immagineCarosello[immagineCorrente].classList.add('active');
+    
+    
+}
+
+successiva.addEventListener('click', function () {
+    next();
+});
+
+precedente.addEventListener('click', function () {
+    previous();
+});
+
+const automatico = setInterval(next, 3000);
